@@ -1,0 +1,57 @@
+# === PYTHON ===
+*.py[cod]
+__pycache__/
+*.so
+*.egg-info/
+*.log
+*.tmp
+.DS_Store
+.env
+.envrc
+*.swp
+
+# === NOTEBOOKS ===
+.ipynb_checkpoints/
+
+# === DATA ===
+# data/raw/
+# data/processed/
+# data/master_df*.csv
+# data/*.csv
+
+# === MODELS ===
+model/
+*.joblib
+*.model
+*.pkl
+
+# === ENVIRONMENTS ===
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+*.yml
+
+# === MLflow runs ===
+mlruns/
+mlruns.db
+
+# === STREAMLIT ===
+.streamlit/
+*.streamlit
+
+# === OS ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === OTHER ===
+*.bak
+*.orig
+*.tmp
+*.old
+*.zip
+*.tar.gz
+*.tgz
+*.rar
