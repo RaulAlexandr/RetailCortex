@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(page_title="RetailCortex – Operational Simulation", layout="wide")
-st.title("📊 RetailCortex – Operational Scenario Simulator")
+st.title("RetailCortex – Operational Scenario Simulator")
 
 uploaded_file = st.file_uploader("Upload your master dataset (CSV)", type=["csv"])
 
@@ -11,7 +11,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     df_simulated = df.copy()
 
-    st.sidebar.header("🧠 Scenario Configuration")
+    st.sidebar.header("Scenario Configuration")
 
     # Transport Budget Simulation
     transport_delta = st.sidebar.slider("Adjust Transport Cost (%)", min_value=-50, max_value=100, value=0, step=5)
@@ -35,17 +35,17 @@ if uploaded_file is not None:
         df_simulated = df_simulated[~df_simulated["store_id"].isin(store_to_close)]
 
     # Focus on a specific product
-    product_focus = st.sidebar.selectbox("📦 Focus on Product (optional)", ["All"] + sorted(df["product_id"].unique().tolist()))
+    product_focus = st.sidebar.selectbox("Focus on Product (optional)", ["All"] + sorted(df["product_id"].unique().tolist()))
     if product_focus != "All":
         df_simulated = df_simulated[df_simulated["product_id"] == product_focus]
 
-    st.subheader("🧾 Key Performance Indicators (KPI)")
+    st.subheader("Key Performance Indicators (KPI)")
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Transport Cost", f"{df_simulated['transport_cost_per_unit'].sum():,.2f}")
     col2.metric("Avg. Promo Effectiveness", f"{df_simulated['promo_effectiveness'].mean():.2f}")
     col3.metric("Total Staff Cost", f"{df_simulated['staff_cost_per_unit'].sum():,.2f}")
 
-    st.subheader("📤 Export Simulated Data")
+    st.subheader("Export Simulated Data")
     st.download_button(
         label="Download Simulated CSV",
         data=df_simulated.to_csv(index=False),
@@ -53,7 +53,7 @@ if uploaded_file is not None:
         mime="text/csv"
     )
 
-    st.subheader("🧾 Simulated Table Preview")
+    st.subheader("Simulated Table Preview")
     st.dataframe(df_simulated.head(30), use_container_width=True)
 else:
     st.info("Please upload your dataset to begin.")
