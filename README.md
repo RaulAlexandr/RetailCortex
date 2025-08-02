@@ -2,7 +2,8 @@
 
 This repository delivers an end-to-end **forecasting and decision intelligence platform** for multi-store retail chains, focused on **sales prediction, scenario simulation, and operational optimization**.
 
-Developed under the structure of a real-world NDA project, this public repo features a **simulated replica** of the original solution. All code, data, and dashboards were regenerated to reflect the pipeline's functionality while maintaining full confidentiality.
+RetailCortex was developed as a personal initiative to demonstrate the structure, modeling flow, and business logic of a production-ready AI forecasting platform. 
+All data and simulations are synthetic, but the codebase reflects how such a solution would be delivered in a real-world client engagement under NDA.
 
 ---
 
@@ -16,7 +17,7 @@ Retail chains often face crucial decisions like:
 
 **RetailCortex** answers these questions through predictive modeling, simulation utilities, and visual dashboards — enabling data-driven operations across multiple stores.
 
-This public version uses **synthetic data only**. The real solution was delivered under NDA.
+This public version uses **synthetic data only**. 
 
 ---
 
@@ -102,17 +103,20 @@ Despite relying on synthetic data without true ground truth, the models captured
 | **Random Forest**   | Stock transfer (classification)  | F1-Score | ~0.84 |
 | **Logistic Reg.**   | Promo increase decision          | F1-Score | ~0.71 |
 
-
-> These scores are based on **synthetic simulation data** and do not reflect production-level accuracy.  
-> In the actual NDA project, error reductions were **exponentially better**, with real MAE below 4 and classification F1-scores consistently above 0.93.
+> These scores are based on **synthetic simulation data** and serve illustrative purposes only.  
+> In real-world implementations using a similar architecture, performance was **significantly higher**, with MAE values below 4 and F1-scores consistently exceeding 0.93.
 
 ---
 
-## NDA Disclaimer
+## Project Disclaimer
 
-This repository mirrors a production solution structure, but **all content is synthetic**. Proprietary data, business logic, evaluation protocols, deployment flow, and client-specific features were removed.
+This project was designed as a simulation of a real-world AI solution for retail decision support.  
+All data used is synthetic and all components have been rebuilt or simplified for public sharing.
 
-**Disclaimer:** This project is not intended for direct execution or production use. Several functionalities have been intentionally removed or simplified. The codebase is solely meant to illustrate the architecture, modeling flow, and technical approach of the original solution.
+The repository is intended for demonstration and educational purposes.  
+While inspired by real operational challenges, it does not include proprietary data, confidential logic, or production infrastructure.
+
+Several functionalities have been streamlined to focus on architecture clarity and modeling flow.
 
 ---
 
@@ -137,4 +141,4 @@ Need a pipeline that doesn't just model but solves business pain-points? I desig
 - Lightweight data-to-insight pipelines
 - Custom automation for internal ops
 
-📩 Contact: raul.devx@protonmail.com
+Contact: raul.devx@protonmail.com
